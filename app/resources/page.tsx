@@ -1,63 +1,96 @@
-export default function GetInvolvedPage() {
+export default function ResourcesPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Get Involved</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">Resources</h1>
 
       <p className="text-gray-700 mb-10">
-        MindBridge Link is built for students, by students. Here are the ways
-        you can get involved — whether you want to receive support, become a
-        mentor, or help us grow this community.
+        Here are helpful tools, guides, and support options for international
+        students at Green River College. These resources are meant to make your
+        transition easier, whether you’re adjusting to life in Washington,
+        learning English, or navigating school.
       </p>
 
-      {/* Become a Mentor */}
+      {/* Academic Support */}
       <section className="mb-10">
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          Become a Mentor
+          Academic & Campus Support
         </h2>
-        <p className="text-gray-700 mb-3">
-          If you're passionate about helping others and you’ve overcome your own
-          challenges as an international student, you can make a real impact.
-        </p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLScItrJ8-Ax-ceeUrve0Kzl69hG-81qS0Zx-RQMGuzI7MhW5zg/viewform?usp=publish-editor"
-          className="px-5 py-2 bg-[#7db249] text-white rounded-lg hover:opacity-90 transition"
-        >
-          Apply to Become a Mentor
-        </a>
+        <ul className="list-disc ml-6 text-gray-700 space-y-2">
+          <li>
+            <a
+              href="https://www.greenriver.edu/students/academics/tutoring-resources/"
+              className="text-[#7db249] hover:underline"
+            >
+              Green River Tutoring & Learning Center
+            </a>{" "}
+            – free tutoring for writing, math, science, and more.
+          </li>
+          <li>
+            <a
+              href="https://www.greenriver.edu/students/academics/library/"
+              className="text-[#7db249] hover:underline"
+            >
+              Holman Library
+            </a>{" "}
+            – research help, study spaces, printing, and technology resources.
+          </li>
+        </ul>
       </section>
 
-      {/* Find a Mentor */}
+      {/* Emotional Support */}
       <section className="mb-10">
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          Find a Mentor
+          Emotional & Mental Health Support
         </h2>
-        <p className="text-gray-700 mb-3">
-          Need guidance, support, or someone to talk to who understands your
-          experience? You can get matched with a trained peer mentor.
-        </p>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSd0P7o4BpiqXHF61V5nyZvatrFyFduusxnvQCF7SEvoNLwjRA/viewform?usp=publish-editor"
-          className="px-5 py-2 border border-[#7db249] text-[#7db249] rounded-lg hover:bg-green-50 transition"
-        >
-          Request a Mentor
-        </a>
+        <ul className="list-disc ml-6 text-gray-700 space-y-2">
+          <li>
+            <a
+              href="https://www.greenriver.edu/students/support-and-services/personal-counseling/"
+              className="text-[#7db249] hover:underline"
+            >
+              GRC Personal Counseling
+            </a>{" "}
+            – free, confidential support for stress, anxiety, or adjustment.
+          </li>
+          <li>
+            <span className="font-medium">Crisis Text Line:</span> Text{" "}
+            <span className="font-semibold">HOME</span> to 741741.
+          </li>
+          <li>
+            <span className="font-medium">988 Suicide & Crisis Lifeline:</span>{" "}
+            Available 24/7 in any language.
+          </li>
+        </ul>
       </section>
 
-      {/* Volunteer */}
-      <section className="mb-12">
+      {/* Life in Washington */}
+      <section className="mb-10">
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          Volunteer With Us
+          Life in Washington
         </h2>
-        <p className="text-gray-700">
-          We’re looking for volunteers who want to help with events,
-          translations, outreach, and new projects. This section will expand
-          soon — but you can express interest now by messaging in the chat!
-        </p>
+        <ul className="list-disc ml-6 text-gray-700 space-y-2">
+          <li>
+            Local transit info:{" "}
+            <a
+              href="https://www.soundtransit.org/"
+              className="text-[#7db249] hover:underline"
+            >
+              Sound Transit
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://kingcounty.gov/en/dept/dph/health-safety/disease-illness/covid19-care"
+              className="text-[#7db249] hover:underline"
+            >
+              King County Health Resources
+            </a>
+          </li>
+        </ul>
       </section>
 
-      <p className="text-gray-500">
-        New ways to get involved will appear here as MindBridge Link continues
-        to grow.
+      <p className="text-gray-500 mt-8">
+        More resources will be added soon as MindBridge Link continues to grow.
       </p>
     </div>
   );
