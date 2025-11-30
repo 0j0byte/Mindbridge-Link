@@ -1,50 +1,76 @@
+import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "./components/Footer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "MindBridge Link",
-  description: "Support for international students",
+  description:
+    "A student-created support space for international students at Green River College.",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+        {/* TOP NAVBAR */}
+        <header className="border-b bg-white">
+          <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+            {/* Logo + Title */}
+            <Link href="/" className="flex items-center gap-3">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/mindbridge-logo.png"
+                  alt="MindBridge Link logo"
+                  fill
+                  className="object-contain rounded-full"
+                />
+              </div>
+              <span className="text-lg font-semibold tracking-tight">
+                MindBridge Link
+              </span>
+            </Link>
 
-      <nav className="w-full bg-white shadow-sm border-b sticky top-0 z-50">
-  <div className="max-w-7xl mx-auto px-10 py-4 flex items-center justify-between">
+            {/* Nav Links */}
+            <nav className="flex items-center gap-5 text-sm md:text-base">
+              <Link
+                href="/chat"
+                className="text-gray-700 hover:text-[#4f7c25] transition"
+              >
+                Chatroom
+              </Link>
+              <Link
+                href="/mentors"
+                className="text-gray-700 hover:text-[#4f7c25] transition"
+              >
+                Mentors
+              </Link>
+              <Link
+                href="/resources"
+                className="text-gray-700 hover:text-[#4f7c25] transition"
+              >
+                Resources
+              </Link>
+              <Link
+                href="/get-involved"
+                className="text-gray-700 hover:text-[#4f7c25] transition"
+              >
+                Get Involved
+              </Link>
+            </nav>
+          </div>
+        </header>
 
-    {/* LOGO + TITLE */}
-    <Link href="/" className="flex items-center gap-3">
-      <Image
-        src="/mindbridge-logo.png"
-        alt="MindBridge Link logo"
-        width={42}
-        height={42}
-        className="rounded-full"
-      />
-      <span className="text-2xl font-semibold tracking-tight text-gray-800">
-        MindBridge Link
-      </span>
-    </Link>
+        {/* MAIN CONTENT */}
+        <main className="flex-1">{children}</main>
 
-    {/* NAV LINKS */}
-    <div className="flex items-center gap-8 text-lg font-medium text-gray-700">
-      <Link href="/" className="hover:text-[#7db249] transition-colors">Home</Link>
-      <Link href="/chat" className="hover:text-[#7db249] transition-colors">Chat</Link>
-      <Link href="/mentors" className="hover:text-[#7db249] transition-colors">Mentors</Link>
-      <Link href="/resources" className="hover:text-[#7db249] transition-colors">Resources</Link>
-      <Link href="/get-involved" className="hover:text-[#7db249] transition-colors">Get Involved</Link>
-    </div>
-
-  </div>
-</nav>
-
-        <main className="flex-1 max-w-6xl mx-auto w-full px-6 py-10">
-          {children}
-        </main>
-
+        {/* GLOBAL FOOTER */}
+        <Footer />
       </body>
     </html>
   );
