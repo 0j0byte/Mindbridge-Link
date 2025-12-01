@@ -1,124 +1,144 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 
 export default function GetInvolvedPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <div className="min-h-screen bg-gradient-to-b from-[#f3f7ec] to-[#e7f2d9] py-16 px-6">
+
       {/* HEADER */}
-      <section className="mb-10 md:mb-14 grid gap-8 md:grid-cols-[1.4fr,1fr] items-center">
-        <div>
-          <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-            Get Involved with MindBridge Link
-          </h1>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-            MindBridge Link only works if students, staff, and community members
-            get involved. You can support international students by mentoring,
-            helping spread the word, or sharing feedback so we can keep
-            improving.
-          </p>
-        </div>
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-800">Get Involved</h1>
+        <p className="mt-4 text-lg text-gray-600">
+          MindBridge Link grows through community. Explore opportunities to connect, support others, and help shape a more inclusive space for international students.
+        </p>
+      </div>
 
-        <div className="flex justify-center md:justify-end">
-          <div className="relative w-64 h-40 md:w-72 md:h-44 rounded-3xl overflow-hidden shadow-lg bg-gray-100">
-            <Image
-              src="/bridge_handshake.jpeg"
-              alt="Hands shaking in partnership"
-              fill
-              className="object-cover"
-            />
+      {/* MAIN CONTENT */}
+      <div className="max-w-5xl mx-auto space-y-16">
+
+        {/* SECTION 1: Join as a Mentor */}
+        <section className="bg-white rounded-2xl p-8 shadow-md border border-gray-200 flex flex-col md:flex-row gap-8 items-start">
+          <Image
+            src="/mentor_help.jpeg"
+            width={140}
+            height={140}
+            alt=""
+            className="rounded-xl object-cover"
+          />
+
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold text-gray-800">Become a Mentor</h2>
+            <p className="mt-3 text-gray-700 leading-relaxed">
+              Mentors play a meaningful role by offering guidance, listening with care, and supporting students 
+              navigating the challenges of studying in a new country. You do not need to have all the answers — only a willingness to help.
+            </p>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScItrJ8-Ax-ceeUrve0Kzl69hG-81qS0Zx-RQMGuzI7MhW5zg/viewform"
+              target="_blank"
+              className="inline-block mt-5 px-6 py-3 bg-[#7db249] text-white rounded-lg font-medium hover:bg-[#6aa03e] transition"
+            >
+              Apply to Become a Mentor
+            </a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* WAYS TO GET INVOLVED */}
-      <section className="mb-14 grid gap-8 md:grid-cols-3">
-        {/* Mentor */}
-        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            Become a peer mentor
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4 flex-1">
-            If you&apos;ve already experienced culture shock, homesickness, or
-            navigating college in a new country, you can help someone who&apos;s
-            just starting that journey.
-          </p>
-          <Link
-            href="/mentors"
-            className="inline-flex mt-2 text-sm font-semibold text-[#7db249] hover:text-[#4f7c25]"
-          >
-            Learn more on the Mentors page →
-          </Link>
-        </div>
+        {/* SECTION 2: Request a Mentor */}
+        <section className="bg-white rounded-2xl p-8 shadow-md border border-gray-200 flex flex-col md:flex-row gap-8 items-start">
+          <Image
+            src="/bridge_handshake.jpeg"
+            width={140}
+            height={140}
+            alt=""
+            className="rounded-xl object-cover"
+          />
 
-        {/* Spread the word */}
-        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            Share MindBridge Link
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4 flex-1">
-            Tell friends, classmates, and instructors about this site. Even a
-            quick share can connect someone to support when they need it most.
-          </p>
-          <p className="text-gray-600 text-xs md:text-sm">
-            You can also print or share QR codes that link directly to{" "}
-            <span className="underline">mindbridge-link.vercel.app</span>.
-          </p>
-        </div>
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold text-gray-800">Find a Mentor</h2>
+            <p className="mt-3 text-gray-700 leading-relaxed">
+              If you are feeling overwhelmed, homesick, confused, or isolated — you are not alone. Connecting with a mentor can help you adjust, build confidence, and talk to someone who understands the international student experience.
+            </p>
 
-        {/* Give feedback */}
-        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            Help us improve
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4 flex-1">
-            This project is still growing. Your feedback on what&apos;s helpful,
-            confusing, or missing will directly shape the next version.
-          </p>
-          <p className="text-gray-600 text-xs md:text-sm">
-            A feedback form can be added here so you can share anonymous thoughts.
-          </p>
-        </div>
-      </section>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd0P7o4BpiqXHF61V5nyZvatrFyFduusxnvQCF7SEvoNLwjRA/viewform?usp=publish-editor"
+              target="_blank"
+              className="inline-block mt-5 px-6 py-3 border border-[#7db249] text-[#7db249] rounded-lg font-medium hover:bg-green-50 transition"
+            >
+              Request a Mentor
+            </a>
+          </div>
+        </section>
 
-      {/* CLASS DELIVERABLES SECTION */}
-      <section className="mb-12 md:mb-16">
-        <div className="bg-[#f3f7ec] border border-[#d7e6be] rounded-3xl p-7 md:p-8">
-          <h2 className="text-xl md:text-2xl font-semibold text-[#40621a] mb-4">
-            Other parts of this project
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
-            MindBridge Link is connected to several other deliverables created
-            in the same class. Together, they work to increase awareness and
-            support for international students.
-          </p>
-          <ul className="text-gray-700 text-sm md:text-base leading-relaxed space-y-1.5">
-            <li>• Instagram campaign about international student mental health</li>
-            <li>• Podcast episode sharing student stories</li>
-            <li>• Infographics and brochures for staff and students</li>
-            <li>• A written resource guide with more detailed information</li>
-          </ul>
-          <p className="text-gray-600 text-xs md:text-sm mt-3">
-            QR codes or direct links to these materials can be added here in the
-            final version, so students and staff can access everything in one
-            place.
-          </p>
-        </div>
-      </section>
+        {/* SECTION 3: Volunteer / Partner */}
+        <section className="bg-white rounded-2xl p-8 shadow-md border border-gray-200 flex flex-col md:flex-row gap-8 items-start">
+          <Image
+            src="/volunteer_badge.jpeg"
+            width={140}
+            height={140}
+            alt=""
+            className="rounded-xl object-cover"
+          />
 
-      {/* PARTNER / CONTACT IDEA */}
-      <section className="mb-4">
-        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7">
-          <h2 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
-            Want to collaborate or share this with your program?
-          </h2>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-            MindBridge Link was created by students, but it&apos;s meant to be
-            shared. If you work with international students or want to partner
-            with this project, you can contact the team through the instructor
-            of this course or suggest adding a small contact form here.
-          </p>
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold text-gray-800">Partner With Us</h2>
+            <p className="mt-3 text-gray-700 leading-relaxed">
+              We collaborate with student organizations, cultural clubs, counselors, and academic departments 
+              to expand support for international students. If your group shares our mission, we would love to connect.
+            </p>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdHfOQGBkt-hwj22ihbcVneW6ulwthvNTcd9Hg36tXNXPChQQ/viewform?usp=dialog"
+              target="_blank"
+              className="inline-block mt-5 px-6 py-3 border border-[#7db249] text-[#7db249] rounded-lg font-medium hover:bg-green-50 transition"
+            >
+              Partnership Inquiry Form
+            </a>
+          </div>
+        </section>
+
+        {/* SECTION 4: Feedback */}
+        <section className="bg-white rounded-2xl p-8 shadow-md border border-gray-200 flex flex-col md:flex-row gap-8 items-start">
+          <Image
+            src="/group_discussion.jpeg"
+            width={140}
+            height={140}
+            alt=""
+            className="rounded-xl object-cover"
+          />
+
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold text-gray-800">Share Your Feedback</h2>
+            <p className="mt-3 text-gray-700 leading-relaxed">
+              MindBridge Link is shaped by the voices of the students who use it. If you have suggestions, ideas, 
+              or needs that we can better support, please share. Your feedback directly improves our work.
+            </p>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScDyXkvA6LkpaoUPEWkutZpzO4y7J-v2gMga_Ycs-6rj8Wvsw/viewform?usp=dialog"
+              target="_blank"
+              className="inline-block mt-5 px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition"
+            >
+              Open Feedback Form
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+      {/* FOOTER */}
+      <footer className="mt-24 border-t pt-10 pb-6 text-center text-gray-600">
+        <p>MindBridge Link — Created by Students at Green River College</p>
+        <div className="mt-2 flex justify-center gap-6">
+          <a href="/" className="text-[#7db249] hover:underline">Home</a>
+          <a href="/chat" className="text-[#7db249] hover:underline">Chatroom</a>
+          <a href="/resources" className="text-[#7db249] hover:underline">Resources</a>
+          <a href="/mentors" className="text-[#7db249] hover:underline">Mentors</a>
+          <a href="https://www.instagram.com/mindbridge.greenriver" target="_blank" className="text-[#7db249] hover:underline">
+            Instagram
+          </a>
         </div>
-      </section>
+      </footer>
     </div>
   );
 }

@@ -1,218 +1,179 @@
+"use client";
+
 import Image from "next/image";
 
 export default function ResourcesPage() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+    <div className="min-h-screen bg-gradient-to-b from-[#f3f7ec] to-[#e7f2d9] py-16 px-6">
+      
       {/* HEADER */}
-      <section className="mb-10 md:mb-14 grid gap-8 md:grid-cols-[1.5fr,1fr] items-start">
-        <div>
-          <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
-            Resources for International Students
-          </h1>
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-3">
-            This page is meant to be more than just a list of links. It&apos;s a
-            starting point for international students who are dealing with
-            culture shock, mental health struggles, homesickness, or confusion
-            about where to go for help.
-          </p>
-          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-            Some of these resources are specific to Green River. Others are
-            broader supports you can access anytime, even late at night.
-          </p>
-        </div>
+      <div className="max-w-4xl mx-auto text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-800">Resources for International Students</h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Support designed to meet the emotional, academic, and cultural needs of international students.
+        </p>
+      </div>
 
-        <div className="flex justify-center md:justify-end">
-          <div className="relative w-64 h-40 md:w-72 md:h-44 rounded-3xl overflow-hidden shadow-lg bg-gray-100">
-            <Image
-              src="/group_discussion.jpeg"
-              alt="Students in discussion"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <div className="max-w-5xl mx-auto space-y-16">
 
-      {/* EMERGENCY / CRISIS SECTION */}
-      <section className="mb-12 md:mb-14">
-        <div className="bg-[#fee2e2] border border-[#fecaca] rounded-3xl p-7 md:p-8">
-          <h2 className="text-xl md:text-2xl font-semibold text-red-800 mb-3">
-            If this is an emergency or you feel unsafe
+        {/* STUDY HIGHLIGHT */}
+        <section className="bg-white rounded-2xl p-8 shadow-md border border-gray-200">
+          <h2 className="text-2xl font-semibold text-gray-800 flex items-center gap-3">
+            <Image src="/mentor_help.jpeg" width={40} height={40} alt="" className="rounded-md" />
+            Mental Health Context
           </h2>
-          <p className="text-red-900 text-sm md:text-base leading-relaxed mb-3">
-            MindBridge Link is not a crisis hotline. If you are thinking about
-            hurting yourself, feel in danger, or are worried for someone&apos;s
-            immediate safety, please contact:
+
+          <p className="mt-4 text-gray-700 leading-relaxed">
+            Research from the National Institutes of Health (2024) found that international students 
+            experience higher rates of suicide attempts compared to domestic students. This is often 
+            connected to cultural stigma, separation from family, academic pressure, and difficulty accessing familiar support systems.
           </p>
-          <ul className="text-red-900 text-sm md:text-base leading-relaxed space-y-1.5">
-            <li>
-              • <span className="font-semibold">988</span> — Suicide &amp; Crisis
-              Lifeline (you can ask for an interpreter)
-            </li>
-            <li>• Your local emergency number (such as 911 in the United States)</li>
-            <li>• Campus safety or security, if you are on or near campus</li>
-          </ul>
-          <p className="text-red-900 text-xs md:text-sm mt-3">
-            After you&apos;re safe, you are still welcome to come back here for
-            peer support, resources, and community.
+
+          <p className="mt-3 text-gray-700">
+            Because of this, culturally responsive resources are essential—not optional. The following 
+            list includes support options that international students can access confidentially and safely.
           </p>
-        </div>
-      </section>
 
-      {/* CAMPUS & LOCAL SUPPORT */}
-      <section className="mb-12 md:mb-16">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-          Support at Green River
-        </h2>
-        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
-          These are places on or connected to campus where international
-          students can go for help with academics, emotions, and everyday life.
-        </p>
+          <a
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10973160/"
+            target="_blank"
+            className="inline-block mt-4 text-[#7db249] underline hover:text-[#587a32]"
+          >
+            View full study
+          </a>
+        </section>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* ISP */}
-          <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              International Student Programs (ISP)
-            </h3>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed flex-1">
-              A key place for questions about visas, status, documents, and
-              adjusting to life in the U.S. Staff are used to working with many
-              different cultures and languages.
-            </p>
-            <p className="text-gray-600 text-xs md:text-sm mt-3">
-              You can ask them where to go for mental health support, academic
-              questions, or help in your language.
-            </p>
-          </div>
+        {/* CRISIS SECTION */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Crisis Support</h2>
 
-          {/* Counseling */}
-          <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Counseling &amp; Wellness
-            </h3>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed flex-1">
-              Confidential support for stress, anxiety, depression, and
-              loneliness. Some counselors may have experience working with
-              international and multilingual students.
-            </p>
-            <p className="text-gray-600 text-xs md:text-sm mt-3">
-              Ask about wait times, whether telehealth is available, and if they
-              can accommodate your language or cultural needs.
-            </p>
-          </div>
+          <div className="grid md:grid-cols-3 gap-6">
 
-          {/* Learning / Tutoring */}
-          <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Learning Center &amp; Tutoring
-            </h3>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed flex-1">
-              Free support for writing, English, math, and other classes. Feeling
-              behind academically can impact mental health; you&apos;re allowed
-              to ask for help before it becomes overwhelming.
-            </p>
-            <p className="text-gray-600 text-xs md:text-sm mt-3">
-              You can bring homework, essays, or questions, even if you&apos;re
-              not sure how to explain them perfectly in English.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CULTURALLY RESPONSIVE + MULTILINGUAL */}
-      <section className="mb-12 md:mb-16">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-          Culturally responsive &amp; multilingual support
-        </h2>
-        <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
-          Many mental health resources are not designed with international
-          students in mind. These ideas focus on language, culture, and feeling
-          understood — not just &quot;fixed.&quot;
-        </p>
-
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Card 1 */}
-          <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-            <div className="relative w-full h-40 mb-5 rounded-2xl overflow-hidden bg-gray-100">
-              <Image
-                src="/students_group_2.jpeg"
-                alt="Students walking together"
-                fill
-                className="object-cover"
-              />
+            <div className="bg-white rounded-2xl p-6 shadow border">
+              <h3 className="font-semibold text-lg text-gray-800">U.S. Crisis Lifeline</h3>
+              <p className="text-gray-600 mt-2">Call 988 from any U.S. phone.</p>
+              <p className="text-gray-600">Available 24/7.</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Talk to someone who understands your culture
-            </h3>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed flex-1">
-              It can feel easier to open up with someone who shares your
-              language, background, or immigration experience. You can:
-            </p>
-            <ul className="text-gray-700 text-sm md:text-base leading-relaxed mt-2 space-y-1">
-              <li>• Request a mentor with a similar cultural background.</li>
-              <li>• Ask staff if any counselors have experience with your region.</li>
-              <li>• Look for student clubs or communities tied to your culture.</li>
-            </ul>
-          </div>
 
-          {/* Card 2 */}
-          <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 flex flex-col">
-            <div className="relative w-full h-40 mb-5 rounded-2xl overflow-hidden bg-gray-100">
-              <Image
-                src="/study_room.jpeg"
-                alt="Study space"
-                fill
-                className="object-cover"
-              />
+            <div className="bg-white rounded-2xl p-6 shadow border">
+              <h3 className="font-semibold text-lg text-gray-800">Crisis Text Line</h3>
+              <p className="text-gray-600 mt-2">Text HOME to 741741 for support.</p>
+              <p className="text-gray-600">Confidential and available 24/7.</p>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Using your own language is okay
-            </h3>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed flex-1">
-              If talking about emotions in English feels hard, you can:
-            </p>
-            <ul className="text-gray-700 text-sm md:text-base leading-relaxed mt-2 space-y-1">
-              <li>• Journal in your first language and share parts in English.</li>
-              <li>• Ask if interpreters or translated materials are available.</li>
-              <li>• Use bilingual mental health resources when possible.</li>
-            </ul>
-            <p className="text-gray-600 text-xs md:text-sm mt-3">
-              In the future, this page can include translated PDFs or links in
-              specific languages based on student needs.
-            </p>
-          </div>
-        </div>
-      </section>
 
-      {/* ONLINE / ANYTIME SUPPORT IDEA */}
-      <section className="mb-4">
-        <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-7 md:p-8 grid gap-6 md:grid-cols-[1.2fr,1fr] items-center">
-          <div>
-            <h2 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
-              When it&apos;s late and you need someone
-            </h2>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
-              Nighttime can feel especially lonely when you&apos;re far from
-              home. This site is one option, but it&apos;s okay to use more than
-              one kind of support.
-            </p>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              You can combine MindBridge Link with crisis lines, trusted friends
-              or family, mentors, and professional services. You don&apos;t have
-              to choose just one.
-            </p>
+            <div className="bg-white rounded-2xl p-6 shadow border">
+              <h3 className="font-semibold text-lg text-gray-800">International Hotlines</h3>
+              <a
+                href="https://www.opencounseling.com/suicide-hotlines"
+                target="_blank"
+                className="text-[#7db249] underline text-sm mt-2 inline-block"
+              >
+                Search by country
+              </a>
+            </div>
+
           </div>
-          <div className="relative w-full h-40 md:h-48 rounded-3xl overflow-hidden bg-gray-100">
-            <Image
-              src="/abstract_hands.jpeg"
-              alt="Abstract supportive hands"
-              fill
-              className="object-cover"
+        </section>
+
+        {/* TALK TO SOMEONE */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Talk to Someone</h2>
+
+          <div className="grid md:grid-cols-2 gap-6">
+
+            {/* Chatroom */}
+            <div className="bg-white rounded-2xl p-6 shadow border flex items-start gap-4">
+              <Image src="/bridge_handshake.jpeg" width={60} height={60} alt="" className="rounded-md" />
+              <div>
+                <h3 className="font-semibold text-lg text-gray-800">MindBridge Chatroom</h3>
+                <p className="text-gray-600 mt-1">
+                  A supportive space where students can connect, share challenges, or ask questions.
+                  Mentors monitor the chatroom daily.
+                </p>
+                <a href="/chat" className="text-[#7db249] underline mt-2 inline-block">
+                  Join the chatroom
+                </a>
+              </div>
+            </div>
+
+            {/* Mentor */}
+            <div className="bg-white rounded-2xl p-6 shadow border flex items-start gap-4">
+              <Image src="/handshake_icon.jpeg" width={60} height={60} alt="" className="rounded-md" />
+              <div>
+                <h3 className="font-semibold text-lg text-gray-800">Find a Mentor</h3>
+                <p className="text-gray-600 mt-1">
+                  Request guidance from someone who understands the international student experience.
+                </p>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSd0P7o4BpiqXHF61V5nyZvatrFyFduusxnvQCF7SEvoNLwjRA/viewform"
+                  target="_blank"
+                  className="text-[#7db249] underline mt-2 inline-block"
+                >
+                  Request a mentor
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* HIGH-VALUE RESOURCES */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">Additional Support</h2>
+
+          <div className="space-y-4">
+            <ResourceLink title="7 Cups — Free Emotional Support" url="https://www.7cups.com" />
+            <ResourceLink title="ULifeline — Mental Health for College Students" url="https://ulifeline.org" />
+            <ResourceLink title="The Steve Fund — Support for Students of Color" url="https://www.stevefund.org" />
+            <ResourceLink
+              title="NAMI — Mental Health Resources for Immigrant Communities"
+              url="https://www.nami.org/Your-Journey/Identity-and-Cultural-Dimensions/Immigrants-and-Refugees"
+            />
+            <ResourceLink
+              title="DoSomething.org — Mental Health Campaigns for Students"
+              url="https://www.dosomething.org/us/campaigns?causes=mental-health"
             />
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* PARTNER SECTION */}
+        <section>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            Partner With Us
+          </h2>
+          <p className="text-gray-700 max-w-2xl">
+            MindBridge Link is open to collaborations with campus departments, student groups,
+            and community organizations committed to supporting international student well-being.
+          </p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdHfOQGBkt-hwj22ihbcVneW6ulwthvNTcd9Hg36tXNXPChQQ/viewform?usp=dialog"
+            target="_blank"
+            className="inline-block mt-4 text-[#7db249] underline hover:text-[#587a32]"
+          >
+            Partnership Inquiry Form
+          </a>
+        </section>
+
+      </div>
     </div>
+  );
+}
+
+function ResourceLink({
+  title,
+  url,
+}: {
+  title: string;
+  url: string;
+}) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      className="block bg-white border rounded-xl p-4 shadow hover:shadow-md transition"
+    >
+      <p className="font-medium text-gray-800">{title}</p>
+      <p className="text-[#7db249] text-sm underline mt-1">Visit site</p>
+    </a>
   );
 }
